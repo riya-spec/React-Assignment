@@ -1,0 +1,93 @@
+/* src/App.css */
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.menu button:hover {
+  text-decoration: underline;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.content {
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger-menu::before {
+    content: "☰";
+    font-size: 24px;
+  }
+
+  /* When hamburger menu is clicked, display the menu items vertically */
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu button {
+    margin: 10px 0;
+    text-align: left;
+    width: 100%;
+  }
+}
